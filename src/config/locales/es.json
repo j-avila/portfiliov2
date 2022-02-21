@@ -1,0 +1,21 @@
+{
+  "translation": {
+    "cover": {
+      "title": "Jose Avila\nDesarrollador JavaScript \n& diseñador UX/UI",
+      "years_experience": "años de experiencia",
+      "repos-published": "repositorios publicados",
+      "published_projects": "shots publicados "
+    },
+    "bio": {
+      "title": "Como puedo ayudar?",
+      "desc": "Soy desarrollador de JavaScript y diseñador de UX/UI con base en Santiago, Chile. He estado trabajando en el campo del desarrollo web durante los últimos 5 años. Tengo una gran pasión por crear interfaces fáciles de usar y siempre trato de mejorar mis habilidades. Siempre estoy buscando nuevos desafíos y siempre estoy tratando de mejorar mis habilidades.",
+      "techs": "HTML semantic, CSS, JS (vanilla), React, React native,  Angular, PHP, NodeJs, mongoDB, Mysql, firebase, AWS, github actions, Docker,  Figma, Photoshop, Illustrator, After Effects, Premiere",
+      "works": "Algunos Trabajos"
+    },
+    "contact": {
+      "title": "¿Interesad@ en trabajar conmigo?",
+      "desc": "Siempre estoy abierto a nuevos proyectos y siempre en busca de nuevos retos. Si estás interesado en trabajar conmigo, ponte en contacto conmigo.",
+      "cta": "Contactame"
+    }
+  }
+}
