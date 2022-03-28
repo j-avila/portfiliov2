@@ -40,6 +40,15 @@ export const CardWrapper = styled.div`
   margin-bottom: 2rem;
   background-color: ${({ theme }) => theme.colors.primary};
   border-radius: 0 0 0.8rem 0.8rem;
+  h3{
+    max-width: 90%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    i{
+      margin-right: 8px;
+    }
+  }
   picture{
     display: block;
     height: fit-content;
@@ -58,6 +67,11 @@ export const CardWrapper = styled.div`
       h3{
         margin: 0;
       }
+    }
+  }
+  .info{
+    span{
+      margin-right: 12px; 
     }
   }
 

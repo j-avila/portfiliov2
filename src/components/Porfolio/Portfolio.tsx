@@ -1,37 +1,18 @@
-import React from "react"
+import React, { useEffect, useState } from "react"
 import { useTranslation } from "react-i18next"
-import Card from "./Card"
+import { formatGhCard } from "../../utils/helplers"
+import GithubCard from "./GithubCard"
 import { Wrapper, PortWrapper } from "./Portfolio.styles"
-import { CardProps } from "./types"
+import { GithubcardProps, PortfolioProps } from "./types"
 
-const Portfolio = () => {
+const Portfolio = ({ githubData }: PortfolioProps) => {
   const { t } = useTranslation()
-  const jobs: CardProps[] = [
-    {
-      id: 1,
-      title: "test",
-      desc: "testeo intenso",
-      link: "http://www.google.com",
-      image:
-        "https://images.unsplash.com/photo-1518791841217-8f162f1e1131?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
-    },
-    {
-      id: 2,
-      title: "test",
-      desc: "testeo intenso",
-      link: "http://www.google.com",
-      image:
-        "https://images.unsplash.com/photo-1518791841217-8f162f1e1131?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
-    },
-    {
-      id: 3,
-      title: "test",
-      desc: "testeo intenso",
-      link: "http://www.google.com",
-      image:
-        "https://images.unsplash.com/photo-1518791841217-8f162f1e1131?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
-    },
-  ]
+  const [repos, setRepoCards] = useState([] as GithubcardProps[])
+  // const [figma, setFigmaCards] = useState()
+
+  useEffect(() => {
+    githubData?.length && setRepoCards(formatGhCard(githubData))
+  }, [githubData])
 
   return (
     <Wrapper>
@@ -43,8 +24,8 @@ const Portfolio = () => {
       <PortWrapper>
         <h1>{t("bio.works")}</h1>
         <div className="portwrapper">
-          {jobs?.map((item) => (
-            <Card key={item.id} data={item} />
+          {repos?.map((item: GithubcardProps) => (
+            <GithubCard key={item.id} data={item} />
           ))}
         </div>
       </PortWrapper>

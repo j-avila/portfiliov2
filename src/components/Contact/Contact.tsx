@@ -51,7 +51,13 @@ const Contact = () => {
       </div>
       <Footer>
         {networks.map((item) => (
-          <a href={item.url} title={item.name} target="_blank" rel="noreferrer">
+          <a
+            key={item.name}
+            href={item.url}
+            title={item.name}
+            target="_blank"
+            rel="noreferrer"
+          >
             <i className={`fa ${item.icon}`} />
           </a>
         ))}
