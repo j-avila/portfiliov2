@@ -2,7 +2,7 @@
   "name": "site",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://j-avila.github.io/portfiliov2/",
+  "homepage": "https://joseavila.xyz",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.2",
     "@testing-library/react": "^12.1.2",

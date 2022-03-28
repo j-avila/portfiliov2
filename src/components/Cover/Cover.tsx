@@ -11,7 +11,7 @@ type Istat = {
 }
 
 const stats: Istat[] = [
-  { value: 20, label: "years_experience" },
+  { value: 15, label: "years_experience" },
   { value: 30, label: "repos-published" },
   { value: 10, label: "published_projects" },
 ]

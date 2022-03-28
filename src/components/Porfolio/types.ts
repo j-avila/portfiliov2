@@ -9,7 +9,7 @@ export type FigmaCardProps = {
   desc: string
   link: string,
   type: string
-  data: GithubcardProps
+  data: Array<any>
 }
 
 export type GithubcardProps = {

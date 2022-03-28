@@ -23,6 +23,9 @@ const GithubCard = (props: { data: GithubcardProps }) => {
           <span>
             <i className="fa-regular fa-eye" /> {data.watchers}
           </span>
+          <span>
+            <i className="fa-solid fa-code" /> {data.language}
+          </span>
         </div>
       </div>
     </CardWrapper>

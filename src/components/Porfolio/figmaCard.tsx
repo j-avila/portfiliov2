@@ -1,7 +1,7 @@
 import React from "react"
 import { FigmaCardProps } from "./types"
 import { CardWrapper } from "./Portfolio.styles"
-const Card = (props: { data: FigmaCardProps }) => {
+const FigmaCard = (props: { data: FigmaCardProps }) => {
   const { data } = props
   return (
     <CardWrapper>
@@ -38,4 +38,4 @@ const Card = (props: { data: FigmaCardProps }) => {
   )
 }
 
-export default Card
+export default FigmaCard

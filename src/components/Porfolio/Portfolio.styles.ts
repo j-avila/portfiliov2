@@ -16,10 +16,27 @@ export const Wrapper = styled.div`
 export const PortWrapper = styled.div`
   
   background-color: ${({ theme }) => theme.colors.secondary};
-  h1{
-    font-size: 1.2rem;
-    margin: 1rem;
-    position: sticky;
+  .menu{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    h1{
+      font-size: 1.2rem;
+      margin: 1rem;
+      position: sticky;
+      margin-left: ${({ theme }) => theme.spacing.md};
+    }
+    i{
+      margin-left: ${({ theme }) => theme.spacing.md};
+      color: 'grey';
+      &.active {
+        color: ${({ theme }) => theme.colors.accent};
+      }
+      &:hover{
+        cursor: pointer;
+        color: white;
+      }
+    }
   }
   .portwrapper{
     display: flex;
@@ -30,6 +47,15 @@ export const PortWrapper = styled.div`
     overflow-y: scroll;
     box-sizing: border-box;
     justify-content: space-between;
+    .not-found{
+      opacity: 0.5;
+      text-align: center;
+      font-size: 1.2rem;
+      margin: 20% auto;
+      i{
+        font-size: ${({ theme }) => theme.fontSize.xl};
+      }
+    }
   }
 `
 export const CardWrapper = styled.div`
