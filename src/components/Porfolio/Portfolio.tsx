@@ -6,10 +6,10 @@ import GithubCard from "./GithubCard"
 import { Wrapper, PortWrapper } from "./Portfolio.styles"
 import { FigmaCardProps, GithubcardProps, PortfolioProps } from "./types"
 
-const NotFound = (props: { desc?: String }) => (
+const NotFound = (props: { title: String }) => (
   <div className="not-found">
     <i className="fa-solid fa-triangle-exclamation" />
-    <h1>{desc}</h1>
+    <h1>{props.title}</h1>
   </div>
 )
 
@@ -17,7 +17,7 @@ const Portfolio = ({ githubData }: PortfolioProps) => {
   const { t } = useTranslation()
   const [section, setSection] = useState<string>("code")
   const [repos, setRepoCards] = useState([] as GithubcardProps[])
-  const [figma, setFigmaCards] = useState([])
+  const [figma] = useState([])
 
   useEffect(() => {
     githubData?.length && setRepoCards(formatGhCard(githubData))
@@ -52,14 +52,14 @@ const Portfolio = ({ githubData }: PortfolioProps) => {
                   <GithubCard key={item.id} data={item} />
                 ))
               ) : (
-                <NotFound desc={t("bio.nothing-found")} />
+                <NotFound title={t("bio.nothing-found")} />
               )
             ) : figma?.length >= 1 ? (
               figma.map((item: FigmaCardProps) => (
                 <FigmaCard key={item.id} data={item} />
               ))
             ) : (
-              <NotFound desc={t("bio.nothing-found")} />
+              <NotFound title={t("bio.nothing-found")} />
             )}
           </>
         </div>
