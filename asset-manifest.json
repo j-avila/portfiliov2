@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.js": "/portfiliov2/static/js/main.bd9e92c2.js",
-    "static/js/787.dd4029b4.chunk.js": "/portfiliov2/static/js/787.dd4029b4.chunk.js",
-    "static/media/me.png": "/portfiliov2/static/media/me.3fcde71c27e117b1c694.png",
-    "static/media/node.svg": "/portfiliov2/static/media/node.786c39706c08ea9b9db5ec9ad71ee99c.svg",
-    "static/media/react.svg": "/portfiliov2/static/media/react.1e9774a64424d1c5e597cd84b1270153.svg",
-    "static/media/angular.svg": "/portfiliov2/static/media/angular.c9496a74cca8aa886c9405340a61227b.svg",
-    "static/media/php.svg": "/portfiliov2/static/media/php.3438843d949a0db5c54c7f0d5f583aa0.svg",
-    "static/media/js.svg": "/portfiliov2/static/media/js.3347e18b5193d6405241b763d3fa6151.svg",
-    "static/media/badge.svg": "/portfiliov2/static/media/badge.ae28dddce098a652f04dfeb70e2946ba.svg",
-    "index.html": "/portfiliov2/index.html",
-    "main.bd9e92c2.js.map": "/portfiliov2/static/js/main.bd9e92c2.js.map",
-    "787.dd4029b4.chunk.js.map": "/portfiliov2/static/js/787.dd4029b4.chunk.js.map"
+    "main.js": "/static/js/main.ade0a802.js",
+    "static/js/787.dd4029b4.chunk.js": "/static/js/787.dd4029b4.chunk.js",
+    "static/media/me.png": "/static/media/me.3fcde71c27e117b1c694.png",
+    "static/media/node.svg": "/static/media/node.786c39706c08ea9b9db5ec9ad71ee99c.svg",
+    "static/media/react.svg": "/static/media/react.1e9774a64424d1c5e597cd84b1270153.svg",
+    "static/media/angular.svg": "/static/media/angular.c9496a74cca8aa886c9405340a61227b.svg",
+    "static/media/php.svg": "/static/media/php.3438843d949a0db5c54c7f0d5f583aa0.svg",
+    "static/media/js.svg": "/static/media/js.3347e18b5193d6405241b763d3fa6151.svg",
+    "static/media/badge.svg": "/static/media/badge.ae28dddce098a652f04dfeb70e2946ba.svg",
+    "index.html": "/index.html",
+    "main.ade0a802.js.map": "/static/js/main.ade0a802.js.map",
+    "787.dd4029b4.chunk.js.map": "/static/js/787.dd4029b4.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.bd9e92c2.js"
+    "static/js/main.ade0a802.js"
   ]
 }
