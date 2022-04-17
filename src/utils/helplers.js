@@ -19,4 +19,5 @@ export const formatDBCard = (repos) =>
     desc: card.description,
     images: card.images,
     tags: card.tags,
+    html_url: card.html_url,
   }))
