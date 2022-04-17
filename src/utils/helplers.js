@@ -10,3 +10,13 @@ export const formatGhCard = (repos) =>
     language: card.language,
     stars: card.stargazers_count,
   }))
+
+export const formatDBCard = (repos) =>
+  repos?.map((card) => ({
+    id: card.id,
+    type: "dribbble",
+    title: card.title,
+    desc: card.description,
+    images: card.images,
+    tags: card.tags,
+  }))

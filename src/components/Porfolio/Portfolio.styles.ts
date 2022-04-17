@@ -14,7 +14,6 @@ export const Wrapper = styled.div`
   }
 `
 export const PortWrapper = styled.div`
-  
   background-color: ${({ theme }) => theme.colors.secondary};
   .menu{
     display: flex;
@@ -39,14 +38,14 @@ export const PortWrapper = styled.div`
     }
   }
   .portwrapper{
-    display: flex;
+    display: grid;
     padding: 1rem;
-    flex-direction: row;
-    flex-wrap: wrap;
     max-height: 60vh;
     overflow-y: scroll;
+    gap: 20px;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fill, 350px);
     box-sizing: border-box;
-    justify-content: space-between;
     .not-found{
       opacity: 0.5;
       text-align: center;
@@ -57,12 +56,18 @@ export const PortWrapper = styled.div`
       }
     }
   }
+  @media (max-width: ${({ theme }) => theme.breakpoints.sm}) {
+    width: 100%;
+    .portwrapper{
+      grid-template-columns: repeat(auto-fill, 300px);
+    }
+  }
 `
 export const CardWrapper = styled.div`
   display: flex;
   box-sizing: content-box;
   flex-direction: column;
-  width: 48%;
+  /* width: 48%; */
   margin-bottom: 2rem;
   background-color: ${({ theme }) => theme.colors.primary};
   border-radius: 0 0 0.8rem 0.8rem;
@@ -99,6 +104,18 @@ export const CardWrapper = styled.div`
     span{
       margin-right: 12px; 
     }
+    &.tags {
+      display: flex;
+      justify-content: start;
+    }
+  }
+
+  .tag {
+    padding: 6px 8px;
+    margin: 2px 4px;
+    font-size: small;
+    border-radius: 8px;
+    background-color: ${({ theme }) => theme.colors.secondary};
   }
 
 `

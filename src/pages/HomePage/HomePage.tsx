@@ -1,4 +1,4 @@
-import React, { useEffect } from "react"
+import React from "react"
 import Contact from "../../components/Contact"
 import Cover from "../../components/Cover"
 import Head from "../../components/Head"
@@ -8,13 +8,13 @@ import { useData } from "../../hooks/useData"
 import { Homepage } from "./HomePage.styles"
 
 const githubDApi = process.env.REACT_APP_GITHUB_API
-const figmaApi = process.env.REACT_APP_FIGMA_API
-const token = process.env.REACT_APP_FIGMA_TOKEN
+const dribbbleApi = process.env.REACT_APP_DRIBBBLE_API
+const token = process.env.REACT_APP_DRIBBBLE_TOKEN
 
 const HomePage = () => {
   const ghData = useData(`${githubDApi}`)
-  const figmaData = useData(`${figmaApi}/me/`, {
-    headers: { "X-Figma-Token": token },
+  const dribbbleData = useData(`${dribbbleApi}`, {
+    headers: { Authorization: token },
   })
 
   return (
@@ -22,7 +22,7 @@ const HomePage = () => {
       <Head />
       <Cover />
       <Slider />
-      <Portfolio githubData={ghData.data} />
+      <Portfolio githubData={ghData.data} dribbbleData={dribbbleData.data} />
       <Contact />
     </Homepage>
   )

@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react"
 import { useTranslation } from "react-i18next"
-import { formatGhCard } from "../../utils/helplers"
-import FigmaCard from "./figmaCard"
+import { formatDBCard, formatGhCard } from "../../utils/helplers"
+import DribbbleCard from "./DribbbleCard"
 import GithubCard from "./GithubCard"
 import { Wrapper, PortWrapper } from "./Portfolio.styles"
-import { FigmaCardProps, GithubcardProps, PortfolioProps } from "./types"
+import { DribbbleCardProps, GithubcardProps, PortfolioProps } from "./types"
 
 const NotFound = (props: { title: String }) => (
   <div className="not-found">
@@ -13,15 +13,16 @@ const NotFound = (props: { title: String }) => (
   </div>
 )
 
-const Portfolio = ({ githubData }: PortfolioProps) => {
+const Portfolio = ({ githubData, dribbbleData }: PortfolioProps) => {
   const { t } = useTranslation()
   const [section, setSection] = useState<string>("code")
   const [repos, setRepoCards] = useState([] as GithubcardProps[])
-  const [figma] = useState([])
+  const [dribbble, setDribbbleCards] = useState([])
 
   useEffect(() => {
     githubData?.length && setRepoCards(formatGhCard(githubData))
-  }, [githubData])
+    dribbbleData?.length && setDribbbleCards(formatDBCard(dribbbleData))
+  }, [githubData, dribbbleData])
 
   return (
     <Wrapper>
@@ -54,9 +55,9 @@ const Portfolio = ({ githubData }: PortfolioProps) => {
               ) : (
                 <NotFound title={t("bio.nothing-found")} />
               )
-            ) : figma?.length >= 1 ? (
-              figma.map((item: FigmaCardProps) => (
-                <FigmaCard key={item.id} data={item} />
+            ) : dribbble?.length >= 1 ? (
+              dribbble.map((item: DribbbleCardProps) => (
+                <DribbbleCard key={item.id} data={item} />
               ))
             ) : (
               <NotFound title={t("bio.nothing-found")} />

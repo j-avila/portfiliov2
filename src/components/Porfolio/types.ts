@@ -1,15 +1,23 @@
 export interface PortfolioProps {
-  githubData?: any;
+  githubData?: Array<any>;
+  dribbbleData?: Array<any>;
 }
 
-export type FigmaCardProps = {
+export type DribbbleCardProps = {
   id: number
   title: string
-  image: string
-  desc: string
-  link: string,
+  description: string
+  images: {
+    hidpi: string
+    normal: string
+    teaser: string
+    four_x: string
+    two_x: string
+    one_x: string
+  },
   type: string
-  data: Array<any>
+  html_url: string
+  tags: Array<string>
 }
 
 export type GithubcardProps = {
@@ -18,6 +26,7 @@ export type GithubcardProps = {
   title: string
   desc: string
   link: string
+  images: string
   forks: number
   watchers: number
   language: string
