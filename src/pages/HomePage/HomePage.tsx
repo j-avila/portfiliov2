@@ -13,9 +13,7 @@ const token = process.env.REACT_APP_DRIBBBLE_TOKEN
 
 const HomePage = () => {
   const ghData = useData(`${githubApi}`)
-  const dribbbleData = useData(`${dribbbleApi}`, {
-    headers: { Authorization: token },
-  })
+  const dribbbleData = useData(`${dribbbleApi}?access_token=${token}`)
 
   return (
     <Homepage>
