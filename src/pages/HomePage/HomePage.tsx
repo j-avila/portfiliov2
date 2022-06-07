@@ -7,12 +7,12 @@ import Slider from "../../components/Slider"
 import { useData } from "../../hooks/useData"
 import { Homepage } from "./HomePage.styles"
 
-const githubDApi = process.env.REACT_APP_GITHUB_API
+const githubApi = process.env.REACT_APP_GITHUB_API
 const dribbbleApi = process.env.REACT_APP_DRIBBBLE_API
 const token = process.env.REACT_APP_DRIBBBLE_TOKEN
 
 const HomePage = () => {
-  const ghData = useData(`${githubDApi}`)
+  const ghData = useData(`${githubApi}`)
   const dribbbleData = useData(`${dribbbleApi}`, {
     headers: { Authorization: token },
   })
