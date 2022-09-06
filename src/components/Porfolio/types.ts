@@ -1,6 +1,7 @@
 export interface PortfolioProps {
   githubData?: Array<any>;
   dribbbleData?: Array<any>;
+  loading?: boolean
 }
 
 export type DribbbleCardProps = {

@@ -20,7 +20,11 @@ const HomePage = () => {
       <Head />
       <Cover />
       <Slider />
-      <Portfolio githubData={ghData.data} dribbbleData={dribbbleData.data} />
+      <Portfolio
+        githubData={ghData.data}
+        dribbbleData={dribbbleData.data}
+        loading={ghData.loading || dribbbleData.loading}
+      />
       <Contact />
     </Homepage>
   )

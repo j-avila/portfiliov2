@@ -13,7 +13,7 @@ export const Wrapper = styled.div`
     grid-template-columns: 1fr;
   }
 `
-export const PortWrapper = styled.div`
+export const PortWrapper = styled.div<{ isloading: boolean }>`
   background-color: ${({ theme }) => theme.colors.secondary};
   .menu{
     display: flex;
@@ -38,14 +38,18 @@ export const PortWrapper = styled.div`
     }
   }
   .portwrapper{
+    gap: 20px;
     display: grid;
     padding: 1rem;
     max-height: 60vh;
     overflow-y: scroll;
-    gap: 20px;
-    justify-content: center;
-    grid-template-columns: repeat(auto-fill, 350px);
     box-sizing: border-box;
+    justify-content: center;
+    grid-template-columns: ${({ isloading }) => isloading ? '1fr' : 'repeat(auto - fill, 350px)'};
+    .spinner{
+      font-size: 10vh;
+      margin: 25% auto;
+    }
     .not-found{
       opacity: 0.5;
       text-align: center;

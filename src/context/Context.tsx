@@ -1,4 +1,4 @@
-import React, { createContext, FC, useState } from "react"
+import React, { createContext, FC, useContext, useState } from "react"
 
 type Props = {
   children: React.ReactNode
@@ -7,6 +7,7 @@ type Props = {
 type IState = {
   device: string
   theme: string
+  session: string | null
 }
 
 type IContext = {
@@ -15,7 +16,11 @@ type IContext = {
 }
 
 export const Context = createContext<IContext>({
-  appContext: { device: "desktop", theme: "default" },
+  appContext: {
+    device: "desktop",
+    theme: "default",
+    session: null,
+  },
   setContext: () => {},
 })
 
@@ -23,9 +28,10 @@ export const SiteProvider: FC<Props> = ({ children }) => {
   const [appContext, setContext] = useState({
     device: "desktop",
     theme: "default",
+    session: null,
   })
 
-  const setAppContext = (args: IState) => setContext(args)
+  const setAppContext = (args: any) => setContext(args)
 
   return (
     <Context.Provider value={{ appContext, setContext: setAppContext }}>
@@ -35,5 +41,7 @@ export const SiteProvider: FC<Props> = ({ children }) => {
 }
 
 Context.displayName = "appContext"
+
+export const useSiteContext = () => useContext(Context)
 
 export default Context

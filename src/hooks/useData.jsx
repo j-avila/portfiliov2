@@ -1,20 +1,20 @@
-import { useEffect, useState } from "react"
+import { useEffect, useState } from "react";
 
 export const useData = (API, options = {}) => {
-  const [data, setdata] = useState()
-  const [loading, setloading] = useState(false)
+  const [data, setdata] = useState();
+  const [loading, setloading] = useState(false);
 
   const fetchData = async (API) => {
-    setloading(true)
-    const response = await fetch(API, options)
-    const json = await response.json()
-    setdata(json)
-    setloading(false)
-  }
+    setloading(true);
+    const response = await fetch(API, options);
+    const json = await response.json();
+    setdata(json);
+    setloading(false);
+  };
 
   useEffect(() => {
-    fetchData(API)
-  }, [])
+    fetchData(API);
+  }, []);
 
-  return { loading, data }
-}
+  return { loading, data };
+};

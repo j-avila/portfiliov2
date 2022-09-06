@@ -25,6 +25,7 @@ const GlobalStyles = createGlobalStyle<{ theme: ITheme }>`
   body {
     margin: 0;
     padding: 0;
+    font-size: 16px;
     font-family: 'Roboto', sans-serif;
     background: ${({ theme }) => theme.colors.background};
     color: ${({ theme }) => theme.colors.text};

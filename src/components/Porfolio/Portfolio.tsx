@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react"
+import { If } from "react-haiku"
 import { useTranslation } from "react-i18next"
 import { formatDBCard, formatGhCard } from "../../utils/helplers"
 import DribbbleCard from "./DribbbleCard"
@@ -12,9 +13,13 @@ const NotFound = (props: { title: String }) => (
     <h1>{props.title}</h1>
   </div>
 )
-
-const Portfolio = ({ githubData, dribbbleData }: PortfolioProps) => {
+const Portfolio = ({
+  githubData,
+  dribbbleData,
+  loading = true,
+}: PortfolioProps) => {
   const { t } = useTranslation()
+
   const [section, setSection] = useState<string>("code")
   const [repos, setRepoCards] = useState([] as GithubcardProps[])
   const [dribbble, setDribbbleCards] = useState([])
@@ -31,7 +36,7 @@ const Portfolio = ({ githubData, dribbbleData }: PortfolioProps) => {
         <p>{t("bio.desc")}</p>
         <p>{t("bio.techs")}</p>
       </div>
-      <PortWrapper>
+      <PortWrapper isloading={loading}>
         <span className="menu">
           <h1>{t("bio.works")}</h1>
           <i
@@ -46,23 +51,28 @@ const Portfolio = ({ githubData, dribbbleData }: PortfolioProps) => {
           />
         </span>
         <div className="portwrapper">
-          <>
-            {section === "code" ? (
-              repos?.length >= 1 ? (
-                repos.map((item: GithubcardProps) => (
-                  <GithubCard key={item.id} data={item} />
+          <If isTrue={loading}>
+            <i className="fa-solid fa-circle-notch fa-spin spinner" />
+          </If>
+          <If isTrue={!loading}>
+            <>
+              {section === "code" ? (
+                repos?.length >= 1 ? (
+                  repos.map((item: GithubcardProps) => (
+                    <GithubCard key={item.id} data={item} />
+                  ))
+                ) : (
+                  <NotFound title={t("bio.nothing-found")} />
+                )
+              ) : dribbble?.length >= 1 ? (
+                dribbble.map((item: DribbbleCardProps) => (
+                  <DribbbleCard key={item.id} data={item} />
                 ))
               ) : (
                 <NotFound title={t("bio.nothing-found")} />
-              )
-            ) : dribbble?.length >= 1 ? (
-              dribbble.map((item: DribbbleCardProps) => (
-                <DribbbleCard key={item.id} data={item} />
-              ))
-            ) : (
-              <NotFound title={t("bio.nothing-found")} />
-            )}
-          </>
+              )}
+            </>
+          </If>
         </div>
       </PortWrapper>
     </Wrapper>
