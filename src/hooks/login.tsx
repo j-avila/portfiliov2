@@ -1,5 +1,6 @@
 import React, { useState } from "react"
 import { useLocalStorage } from "react-haiku"
+import { fetchOptions } from "../helplers"
 import { IForm } from "./types"
 
 const useLogin = () => {
@@ -7,17 +8,9 @@ const useLogin = () => {
   const [loading, setLoading] = useState(false)
   const [session, setSession] = useLocalStorage("session")
 
-  const options = (form: IForm) => ({
-    method: "POST",
-    body: JSON.stringify(form),
-    headers: {
-      "Content-Type": "application/json",
-    },
-  })
-
   const handleLogin = (form: IForm): void => {
     setLoading(true)
-    fetch(`${apiUrl}/login`, options(form))
+    fetch(`${apiUrl}/login`, fetchOptions(form))
       .then((resp) => {
         if (resp.ok) {
           return resp.json()

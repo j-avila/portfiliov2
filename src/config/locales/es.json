@@ -17,6 +17,15 @@
       "title": "¿Interesad@ en trabajar conmigo?",
       "desc": "Siempre estoy abierto a nuevos proyectos y siempre en busca de nuevos retos. Si estás interesado en trabajar conmigo, ponte en contacto haciendo click en el boton.",
       "cta": "Contactame"
+    },
+    "admin": {
+      "title": "Administrador de projectos",
+      "name": "Nombre del proyecto",
+      "link": "Enlace al proyecto",
+      "repo": "Enlace al codigo",
+      "thumbnail": "Imagen",
+      "description": "Descripción",
+      "send": "Enviar"
     }
   }
 }

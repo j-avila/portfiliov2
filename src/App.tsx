@@ -10,6 +10,7 @@ import Admin from "./pages/Admin"
 import NotFound from "./components/NotFound"
 import PrivateRoutes from "./components/common/PrivateRoute"
 import { SiteProvider } from "./context/Context"
+import ProjectForm from "./pages/ProjectForm"
 
 function App() {
   //TODO resolver el tema de las ip dinamicas y mongo altlas
@@ -23,6 +24,7 @@ function App() {
               <Route path="/login" element={<Login />} />
               <Route element={<PrivateRoutes />}>
                 <Route path="/admin" element={<Admin />} />
+                <Route path="/create" element={<ProjectForm />} />
               </Route>
               <Route path="*" element={<NotFound />} />
             </Routes>

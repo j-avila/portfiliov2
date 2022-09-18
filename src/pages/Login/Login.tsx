@@ -7,8 +7,8 @@ import { ReactComponent as Badge } from "../../assets/badge.svg"
 import theme from "../../config/theme"
 
 import * as St from "./Login.styles"
-import useLogin from "../../services/login"
-import { IForm } from "../../services/types"
+import useLogin from "../../hooks/login"
+import { IForm } from "../../hooks/types"
 
 const Login = () => {
   const [form, setForm] = useState<IForm>()
