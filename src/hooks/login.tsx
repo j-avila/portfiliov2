@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import { useState } from "react"
 import { useLocalStorage } from "react-haiku"
 import { fetchOptions } from "../helplers"
 import { IForm } from "./types"
