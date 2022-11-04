@@ -8,7 +8,7 @@ import * as St from "./Admin.styles"
 interface Iproject {
   name: string
   description: string
-  thumbnail: string
+  image: string
   link: string
   repo: string
   tags: [string]
@@ -37,7 +37,15 @@ const Admin = () => {
       <If isTrue={data?.projects?.length >= 1}>
         {data?.projects?.map((item: Iproject) => (
           //TODO: create the cards for show the projects on admin
-          <p>{item.name}</p>
+          <>
+            <img src={item.image} alt={item.name} />
+            <p>{item.name}</p>
+            <p>{item.repo}</p>
+            <div>
+              <h4>Tags</h4>
+              {item.tags && item.tags.map((tag) => <p>{tag}</p>)}
+            </div>
+          </>
         ))}
       </If>
       <If isTrue={data?.projects?.length <= 0}>nothing to show</If>

@@ -3,6 +3,7 @@ import React, { FormEvent, useEffect, useState } from "react"
 import { If, useLocalStorage } from "react-haiku"
 import { useTranslation } from "react-i18next"
 import { useNavigate } from "react-router-dom"
+import BadgeInput from "../../components/common/BadgeInput"
 import Button from "../../components/common/Button"
 import Menu from "../../components/common/Menu"
 import { Iuser } from "../../components/types"
@@ -16,6 +17,7 @@ interface IForm {
   repo?: string
   description?: string
   image?: File
+  tags?: string[]
 }
 
 const imageMimeType = /image\/(png|jpg|jpeg)/i
@@ -156,7 +158,7 @@ const ProjectForm = () => {
               }
             />
           </St.InputField>
-
+          <BadgeInput tags={form?.tags || []} tagHandler={setForm} />
           <Button
             type="submit"
             disabled={loading}

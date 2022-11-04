@@ -5,6 +5,7 @@ const theme = {
     accent: "#8BC34A",
     background: "#1F1D2C",
     text: "#C5C5C5",
+    error: "tomato",
   },
   fontSize: {
     md: "16px",
