@@ -50,11 +50,20 @@ export const InputField = styled.div`
   display: flex;
   margin-bottom: 1rem;
   align-items: center;
+  padding: 0.2rem;
+  border-radius: 8px;
   justify-content: space-between;
   label {
     margin-right: 1rem;
   }
-  input {
-    padding: 0.2rem;
+  input[type="file"] {
+    border: 0;
+  }
+  input,
+  textarea {
+    padding: 0.5rem;
+    background: none;
+    color: ${({ theme }) => theme.colors.text};
+    border: ${({ theme }) => `2px solid ${theme.colors.secondary}`};
   }
 `

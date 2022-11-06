@@ -1,8 +1,9 @@
 import styled from "styled-components"
 
 export const TagWarrper = styled.div`
-  border: ${({ theme }) => `2px solid ${theme.secondary}`};
-  border-radius: 3px;
+  border: ${({ theme }) => `2px solid ${theme.colors.secondary}`};
+  padding: 0.2rem;
+  border-radius: 8px;
   width: min(80vw, 600px);
   display: flex;
   align-items: center;
@@ -11,7 +12,6 @@ export const TagWarrper = styled.div`
 
   .close {
     height: 20px;
-    cursor: pointer;
     font-size: 18px;
     margin-left: 0.5em;
     align-items: center;
@@ -22,11 +22,13 @@ export const TagWarrper = styled.div`
     color: ${({ theme }) => theme.error};
   }
 
-  .tag-input {
+  input {
     flex-grow: 1;
     padding: 0.5em 0;
+    color: ${({ theme }) => theme.colors.text};
     border: none;
     outline: none;
+    background: none;
   }
 `
 

@@ -45,7 +45,7 @@ export const PortWrapper = styled.div<{ isloading: boolean }>`
     overflow-y: scroll;
     box-sizing: border-box;
     justify-content: center;
-    grid-template-columns: ${({ isloading }) => isloading ? '1fr' : 'repeat(auto - fill, 350px)'};
+    grid-template-columns: ${({ isloading }) => isloading ? '1fr' : 'repeat(auto-fill, 45%)'};
     .spinner{
       font-size: 10vh;
       margin: 25% auto;
@@ -71,7 +71,7 @@ export const CardWrapper = styled.div`
   display: flex;
   box-sizing: content-box;
   flex-direction: column;
-  /* width: 48%; */
+  /* width: 50%; */
   margin-bottom: 2rem;
   background-color: ${({ theme }) => theme.colors.primary};
   border-radius: 0 0 0.8rem 0.8rem;
@@ -86,10 +86,11 @@ export const CardWrapper = styled.div`
   }
   picture{
     display: block;
-    height: fit-content;
+    height: 250px;
     overflow: hidden;
     img{
-      width: 100%;
+      width:inherit;
+      height: 100%;
     }
   }
   .card-text{
@@ -121,5 +122,15 @@ export const CardWrapper = styled.div`
     border-radius: 8px;
     background-color: ${({ theme }) => theme.colors.secondary};
   }
-
+  .actions {
+    text-align: end;
+    align-self:flex-end;
+    padding: .8rem;
+    .fa-trash {
+      color: red;
+      &:hover{
+        color: #7e0505;
+      }
+    }
+  }
 `

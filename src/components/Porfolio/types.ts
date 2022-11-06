@@ -33,3 +33,13 @@ export type GithubcardProps = {
   language: string
   stars: number
 }
+
+export interface Iproject {
+  _id: string
+  name: string
+  description: string
+  image: string
+  link: string
+  repo: string
+  tags: [string]
+}

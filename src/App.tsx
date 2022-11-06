@@ -13,7 +13,6 @@ import { SiteProvider } from "./context/Context"
 import ProjectForm from "./pages/ProjectForm"
 
 function App() {
-  //TODO resolver el tema de las ip dinamicas y mongo altlas
   return (
     <div className="App">
       <SiteProvider>
@@ -25,6 +24,7 @@ function App() {
               <Route element={<PrivateRoutes />}>
                 <Route path="/admin" element={<Admin />} />
                 <Route path="/create" element={<ProjectForm />} />
+                <Route path="/project/:id" element={<ProjectForm />} />
               </Route>
               <Route path="*" element={<NotFound />} />
             </Routes>
