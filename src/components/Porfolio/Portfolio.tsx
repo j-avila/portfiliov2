@@ -58,12 +58,12 @@ const Portfolio = ({
             }`}
             onClick={() => setSection("design")}
           />
-          <i
+          {/*  <i
             className={`fas fa-code-branch ${
               section === "code" ? "active" : ""
             }`}
             onClick={() => setSection("repos")}
-          />
+          /> */}
         </span>
         <div className="portwrapper">
           <If isTrue={loading}>
