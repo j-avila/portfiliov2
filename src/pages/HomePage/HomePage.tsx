@@ -9,11 +9,13 @@ import { Homepage } from "./HomePage.styles"
 
 const githubApi = process.env.REACT_APP_GITHUB_API
 const dribbbleApi = process.env.REACT_APP_DRIBBBLE_API
+const projectsApi = process.env.REACT_APP_PORTFOLIO_API
 const token = process.env.REACT_APP_DRIBBBLE_TOKEN
 
 const HomePage = () => {
   const ghData = useData(`${githubApi}`)
   const dribbbleData = useData(`${dribbbleApi}?access_token=${token}`)
+  const projectsData = useData(`${projectsApi}/projects`)
 
   return (
     <Homepage>
@@ -23,7 +25,8 @@ const HomePage = () => {
       <Portfolio
         githubData={ghData.data}
         dribbbleData={dribbbleData.data}
-        loading={ghData.loading || dribbbleData.loading}
+        projectsData={projectsData?.data?.projects}
+        loading={ghData.loading || dribbbleData.loading || projectsData.loading}
       />
       <Contact />
     </Homepage>

@@ -12,7 +12,11 @@ const ProjectCard = (props: {
     <CardWrapper>
       <div className="card-image">
         {data?.image && (
-          <a href={isEdit ? `/project/${data._id}` : data.link}>
+          <a
+            href={isEdit ? `/project/${data._id}` : data.link}
+            target={isEdit ? "_self" : "_blank"}
+            rel="noreferrer"
+          >
             <picture>
               <img src={data.image} alt={data.name} />
             </picture>
@@ -31,7 +35,9 @@ const ProjectCard = (props: {
           <span>
             <i className="fa-solid fa-tag" />
             {data.tags?.map((item) => (
-              <span className="tag">{item}</span>
+              <span className="tag" key={item}>
+                {item}
+              </span>
             ))}
           </span>
         </div>

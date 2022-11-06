@@ -11,6 +11,18 @@ export const formatGhCard = (repos) =>
     stars: card.stargazers_count,
   }))
 
+export const formatPjtCard = (project) =>
+  project?.map((card) => ({
+    id: card._id,
+    type: "project",
+    name: card.name,
+    desc: card.description,
+    link: card.link,
+    repo: card.repo,
+    tags: card.tags,
+    image: card.image,
+  }))
+
 export const formatDBCard = (repos) =>
   repos?.map((card) => ({
     id: card.id,
