@@ -16,7 +16,7 @@ export const formatPjtCard = (project) =>
     id: card._id,
     type: "project",
     name: card.name,
-    desc: card.description,
+    description: card.description,
     link: card.link,
     repo: card.repo,
     tags: card.tags,
@@ -33,3 +33,9 @@ export const formatDBCard = (repos) =>
     tags: card.tags,
     html_url: card.html_url,
   }))
+
+export const stringToHTML = (str) => {
+  var dom = document.createElement("div")
+  dom.innerHTML = str
+  return dom
+}

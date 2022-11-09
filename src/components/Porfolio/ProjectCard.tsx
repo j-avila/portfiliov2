@@ -42,6 +42,16 @@ const ProjectCard = (props: {
           </span>
         </div>
       </div>
+      <If isTrue={!isEdit}>
+        <div className="actions">
+          <i
+            className="fas fa-code-branch"
+            onClick={() => window.open(data.repo)}
+          >
+            <span>Ver repositorio</span>
+          </i>
+        </div>
+      </If>
       <If isTrue={isEdit}>
         <div className="actions">
           {handleDelete && (

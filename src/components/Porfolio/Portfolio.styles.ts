@@ -104,6 +104,9 @@ export const CardWrapper = styled.div`
         margin: 0;
       }
     }
+    p {
+      overflow-wrap: break-word;
+    }
   }
   .info{
     span{
@@ -130,6 +133,22 @@ export const CardWrapper = styled.div`
       color: red;
       &:hover{
         color: #7e0505;
+      }
+    }
+    .fa-code-branch {
+      color: white;
+      span {
+        font-size: x-small;
+        display: none;
+        margin-left: 12px;
+        vertical-align: middle;
+      }
+      &:hover{
+        cursor: pointer;
+        color: ${({ theme }) => theme.colors.accent};
+        span {
+          display: inline;
+        }
       }
     }
   }

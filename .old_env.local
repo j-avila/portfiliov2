@@ -1,0 +1,4 @@
+REACT_APP_PORTFOLIO_API=http://localhost:8080/api
+REACT_APP_GITHUB_API=https://api.github.com/users/j-avila/repos
+REACT_APP_DRIBBBLE_API=https://api.dribbble.com/v2/user/shots
+REACT_APP_DRIBBBLE_TOKEN=2039d226bf130815eca4bb58bdb37f05ab46289ebe02defbc549fd0a4c39dc84

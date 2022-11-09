@@ -8,7 +8,7 @@ export interface PortfolioProps {
 export type DribbbleCardProps = {
   id: number
   title: string
-  description: string
+  desc: string
   images: {
     hidpi: string
     normal: string
