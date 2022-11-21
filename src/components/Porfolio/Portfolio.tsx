@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react"
 import { If } from "react-haiku"
 import { useTranslation } from "react-i18next"
 import { formatDBCard, formatGhCard, formatPjtCard } from "../../utils/helplers"
+import Slider from "../Slider"
 import DribbbleCard from "./DribbbleCard"
 import GithubCard from "./GithubCard"
 import { Wrapper, PortWrapper } from "./Portfolio.styles"
@@ -43,7 +44,8 @@ const Portfolio = ({
       <div className="bio">
         <h1>{t("bio.title")}</h1>
         <p>{t("bio.desc")}</p>
-        <p>{t("bio.techs")}</p>
+        <p>{t("bio.stack")}</p>
+        <Slider />
       </div>
       <PortWrapper isloading={loading}>
         <span className="menu">

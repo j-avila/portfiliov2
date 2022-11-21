@@ -1,9 +1,9 @@
 import React from "react"
+import About from "../../components/About"
 import Contact from "../../components/Contact"
 import Cover from "../../components/Cover"
 import Head from "../../components/Head"
 import { Portfolio } from "../../components/Porfolio"
-import Slider from "../../components/Slider"
 import { useData } from "../../hooks/useData"
 import { Homepage } from "./HomePage.styles"
 
@@ -21,7 +21,7 @@ const HomePage = () => {
     <Homepage>
       <Head />
       <Cover />
-      <Slider />
+      <About />
       <Portfolio
         githubData={ghData.data}
         dribbbleData={dribbbleData.data}

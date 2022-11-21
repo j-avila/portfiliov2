@@ -34,7 +34,7 @@ const Contact = () => {
     },
     {
       name: "CV",
-      url: "https://shorturl.at/jyWZ8",
+      url: "https://shorturl.at/ptFVW",
       icon: "fa-solid fa-file-pdf",
       show: true,
     },
