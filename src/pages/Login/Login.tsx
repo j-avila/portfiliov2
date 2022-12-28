@@ -12,12 +12,12 @@ import { IForm } from "../../hooks/types"
 
 const Login = () => {
   const [form, setForm] = useState<IForm>()
-  const [session, setSession] = useLocalStorage("session")
+  const [, setSession] = useLocalStorage("session")
   const { loading, handleLogin } = useLogin()
 
   useEffect(() => {
     setSession({ user: null })
-  }, [])
+  }, [setSession])
 
   return (
     <St.Login>

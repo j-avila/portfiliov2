@@ -1,7 +1,6 @@
 import React from "react"
 import { DribbbleCardProps } from "./types"
 import { CardWrapper } from "./Portfolio.styles"
-import { stringToHTML } from "../../utils/helplers"
 import HTMLReactParser from "html-react-parser"
 const DribbbleCard = (props: { data: DribbbleCardProps }) => {
   const { data } = props

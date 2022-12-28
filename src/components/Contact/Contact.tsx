@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react"
+import React, { useState } from "react"
 import { useLocalStorage } from "react-haiku"
 import { useTranslation } from "react-i18next"
 import { Iuser } from "../types"
@@ -7,7 +7,7 @@ import { ContactBox, Footer } from "./Contact.styles"
 const Contact = () => {
   const { t } = useTranslation()
   const [session] = useLocalStorage<Iuser>("session")
-  const [networks, setNetworks] = useState([
+  const [networks] = useState([
     {
       name: "github",
       url: "https://github.com/j-avila",
