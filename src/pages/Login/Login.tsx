@@ -1,3 +1,4 @@
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import React, { useEffect, useState } from "react"
 import { useLocalStorage } from "react-haiku"
 import Button from "../../components/common/Button"
@@ -12,7 +13,7 @@ import { IForm } from "../../hooks/types"
 
 const Login = () => {
   const [form, setForm] = useState<IForm>()
-  const [, setSession] = useLocalStorage("session")
+  const [session, setSession] = useLocalStorage("session")
   const { loading, handleLogin } = useLogin()
 
   useEffect(() => {
