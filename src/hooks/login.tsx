@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { useState } from "react"
 import { useLocalStorage } from "react-haiku"
 import { fetchOptions } from "../helplers"
