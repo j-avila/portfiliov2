@@ -13,6 +13,7 @@ import { ReactComponent as MDBBadge } from "../../assets/icons/mongodb.svg"
 import { ReactComponent as SQLBadge } from "../../assets/icons/mysql.svg"
 import { ReactComponent as FBSBadge } from "../../assets/icons/firebase.svg"
 import { ReactComponent as TSFBadge } from "../../assets/icons/tensorflow.svg"
+import { ReactComponent as FultterBadge } from "../../assets/icons/flutter.svg"
 import Popup from "../common/Popup"
 
 const Slider = () => {
@@ -36,6 +37,9 @@ const Slider = () => {
         </Popup>
         <Popup content="Single-SPA">
           <SSPABadge width={50} height={50} />
+        </Popup>
+        <Popup content="Fultter">
+          <FultterBadge width={50} height={50} />
         </Popup>
         <Popup content="PHP">
           <PHPBadge width={60} height={60} />
