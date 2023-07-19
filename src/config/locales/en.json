@@ -1,20 +1,24 @@
 {
   "translation": {
     "cover": {
-      "title": "Jose Avila\nJavaScript developer \n& UX/UI designer",
+      "title": "Jose Avila\nSoftware developer \n& UX/UI designer",
       "years_experience": "years of experience",
       "repos-published": "repositories published",
       "published_projects": "shots projects"
     },
     "bio": {
-      "title": "How dio I Help?",
-      "desc": "I am a JavaScript developer and UX/UI designer based in Santiago, Chile. I have been working in the web development field for the last 5 years. I have a strong passion for creating user-friendly interfaces and I am always trying to improve my skills. I am always looking for new challenges and I am always trying to improve my skills.",
-      "techs": "HTML semantic, CSS, JS (vanilla), React, React native,  Angular, PHP, NodeJs, mongoDB, Mysql, firebase, AWS, github actions, Docker,  Figma, Photoshop, Illustrator, After Effects, Premiere",
-      "works": "Some jobs"
+      "title": "How can I Help?",
+      "desc": "I am a Software developer and UX/UI designer based in Santiago, Chile. I have been working in the web development field for the last 5 years. \n \nI have a strong passion for creating user-friendly interfaces. \n \nAlways looking for new challenges and I am always trying to improve my skills.",
+      "stack": "Favourite stack:",
+      "techs": "semantic HTML, CSS, JS (vanilla), React, React native,  Angular, PHP, NodeJs, mongoDB, Mysql, firebase, AWS, github actions, Docker,  Figma, Photoshop, Illustrator, After Effects, Premiere",
+      "works": "Some jobs",
+      "coder": "Developer",
+      "designer": "Designer",
+      "drummer": "Drummer"
     },
     "contact": {
-      "title": "Interested in working with me?",
-      "desc": "I am always open to new projects and I am always looking for new challenges. If you are interested in working with me, please contact me.",
+      "title": "Interested on working with me?",
+      "desc": "I am always open to new projects and I am always looking for new challenges. If you are interested in working with me, please press the button below.",
       "cta": "Contact me"
     }
   }
